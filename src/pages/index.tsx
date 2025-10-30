@@ -1,56 +1,88 @@
 import Head from "next/head";
-import { Github, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowRight, Brain, Zap, Globe, Mail, Linkedin, Twitter, Github } from "lucide-react";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Pamela Alfred – Consultante IA</title>
-        <meta name="description" content="IA, No-Code, Transformation Numérique" />
+        <title>Pamela Alfred | Consultante IA & Transformation Numérique</title>
+        <meta name="description" content="IA Générative • No-Code • Automatisation • Canada-Afrique" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-gradient-to-b from-slate-900 to-slate-800 text-white min-h-screen">
+      <main className="bg-white text-gray-900">
         {/* Hero */}
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop" alt="Hero" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="relative z-10 text-center px-4">
-            <h1 className="text-5xl md:text-7xl font-bold">Pamela Alfred</h1>
-            <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">Consultante IA | No-Code | CHAFRIC</p>
-            <div className="mt-8 flex justify-center gap-4">
-              <a href="#contact" className="flex items-center gap-2 px-6 py-3 bg-blue-600 rounded hover:bg-blue-700">
-                <Mail className="h-5 w-5" /> Me Contacter
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Pamela Alfred
+            </h1>
+            <p className="mt-6 text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
+              Consultante en <span className="font-semibold text-blue-600">Intelligence Artificielle</span> & 
+              <span className="font-semibold text-indigo-600"> Transformation Numérique</span>
+            </p>
+            <p className="mt-4 text-lg text-gray-600">Fondatrice de CHAFRIC • Pont Canada-Afrique</p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#contact" className="group inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">
+                Lancer mon projet IA <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="/cv.pdf" className="flex items-center gap-2 px-6 py-3 bg-gray-700 rounded hover:bg-gray-800">
-                CV
+              <a href="mailto:pamela@chafric.com" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:border-blue-600 hover:text-blue-600 transition-all">
+                <Mail className="h-5 w-5" /> Me contacter
               </a>
             </div>
           </div>
         </section>
 
-        {/* About */}
-        <section className="py-20 px-4 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" alt="Pamela" className="rounded-lg" />
-            <div>
-              <p className="text-lg mb-6">Experte en IA générative, j'aide les entrepreneurs africains à innover avec le no-code.</p>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-3"><MapPin className="h-5 w-5 text-blue-500" /> <strong>Localisation:</strong> Montréal</li>
-                <li className="flex items-center gap-3"><Mail className="h-5 w-5 text-blue-500" /> <strong>Email:</strong> pamela@chafric.com</li>
-                <li className="flex items-center gap-3"><Phone className="h-5 w-5 text-blue-500" /> <strong>Tél:</strong> +1 (514) 555-0192</li>
-              </ul>
+        {/* Expertise */}
+        <section className="py-20 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-16">Expertise</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">IA Générative</h3>
+                <p className="text-gray-600">ChatGPT, LLM, automatisation intelligente</p>
+              </div>
+              <div className="text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="h-8 w-8 text-indigo-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">No-Code & Automatisation</h3>
+                <p className="text-gray-600">Make.com, Zapier, Bubble, Airtable</p>
+              </div>
+              <div className="text-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="h-8 w-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Canada-Afrique</h3>
+                <p className="text-gray-600">Accompagnement biculturel, CHAFRIC</p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Contact */}
-        <section id="contact" className="py-20 px-4 bg-slate-900 text-center">
-          <h2 className="text-4xl font-bold mb-4">Prêt à innover ?</h2>
-          <p className="text-lg mb-8">Discutons de votre projet</p>
-          <div className="flex justify-center gap-6">
-            <a href="https://linkedin.com/in/pamela-alfred" target="_blank"><Linkedin className="h-8 w-8 text-gray-400 hover:text-white" /></a>
-            <a href="https://twitter.com/pamela_alfred" target="_blank"><Twitter className="h-8 w-8 text-gray-400 hover:text-white" /></a>
-            <a href="https://github.com/QueenMakaya" target="_blank"><Github className="h-8 w-8 text-gray-400 hover:text-white" /></a>
+        {/* CTA Final */}
+        <section id="contact" className="py-20 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Prêt à transformer votre entreprise ?</h2>
+            <p className="text-xl mb-8 opacity-90">Automatisation • IA • Croissance</p>
+            <a href="mailto:pamela@chafric.com" className="inline-flex items-center gap-3 px-10 py-5 bg-white text-blue-600 font-bold rounded-full hover:bg-gray-100 transition-all text-lg shadow-lg">
+              <Mail className="h-6 w-6" /> Démarrer maintenant
+            </a>
+            <div className="mt-10 flex justify-center gap-6">
+              <a href="https://linkedin.com/in/pamela-alfred" target="_blank" className="hover:text-blue-200 transition-colors">
+                <Linkedin className="h-7 w-7" />
+              </a>
+              <a href="https://twitter.com/pamela_alfred" target="_blank" className="hover:text-blue-200 transition-colors">
+                <Twitter className="h-7 w-7" />
+              </a>
+              <a href="https://github.com/QueenMakaya" target="_blank" className="hover:text-blue-200 transition-colors">
+                <Github className="h-7 w-7" />
+              </a>
+            </div>
           </div>
         </section>
       </main>
